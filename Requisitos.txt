@@ -1,0 +1,4 @@
+python superior a 3.8
+credenciales API TMDB
+SQL server
+Biliotecas: pyodbc ó pymssql
