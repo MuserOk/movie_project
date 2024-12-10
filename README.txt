@@ -19,7 +19,8 @@ _________SQL Server instalado y configurado.
 _________Biblioteca de Python para conectarse a SQL Server (pyodbc o pymssql).
 
 ----DATOS A EXTRAER----
-____movie_id title 
+____movie_id 
+____title 
 ____release_date 
 ____original_language 
 ____vote_average 
