@@ -1,0 +1,19 @@
+1)Uso de pyodbc o pymssql? 
+     Como mi proyecto involucra la extracción, carga y manipulación de datos, y podría crecer en complejidad,
+    considero que pyodbc es la opción más sólida y eficiente. Esto me dará la flexibilidad necesaria para manejar 
+    los datos de forma escalable y sin enfrentar limitaciones técnicas a futuro.
+2)Consultas sql en script principal o archivo sql separado?
+     Prefiero usar archivos SQL externos porque organizan mejor el proyecto al separar las consultas del código, 
+    lo que facilita encontrarlas y gestionarlas. 
+      Además, son reutilizables en diferentes partes del proyecto o en otros futuros. Esta separación también permite 
+    realizar cambios en las consultas sin tocar el código base. 
+     Otra ventaja es que puedo probarlos directamente en herramientas de base de datos, lo que simplifica las pruebas. 
+    También es útil para el control de cambios con herramientas como Git y facilita la colaboración con otros equipos. 
+     Por último, los archivos SQL son portables y se pueden usar en distintos entornos.
+3)Deberia usar libreria de pandas?
+     En mi proyecto, no veo necesario usar pandas porque los datos se extraen de una API y se insertan directamente 
+    en la base de datos SQL, sin necesidad de hacer transformaciones complejas o manipulaciones avanzadas. 
+    Usando pyodbc con archivos SQL externos, puedo manejar eficientemente la carga e inserción de datos. 
+     Además, las consultas SQL me permiten gestionar y manipular los datos directamente en la base de datos, 
+    sin tener que cargar todo en memoria con un DataFrame, lo cual sería innecesario para este tipo de proceso de carga simple.
+
