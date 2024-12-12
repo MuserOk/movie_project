@@ -1,10 +1,10 @@
-import os
-import requests
-import pyodbc
-import json
+import os # para gestionar las variables de ntorno y trabajar con rutas de archivos
+import requests # para interactuar con la api (solicitudes get , post)
+import pyodbc #relacionar pyrhon con base de datos (escalable a futuro/ actualizaciones constantes)
+import json #por datos en formato json (conversion)
 
 # Cargar variables de entorno desde un archivo .env
-from dotenv import load_dotenv
+from dotenv import load_dotenv # dotenv cargar variables de entorno(seguridad:archivos con datos snsibles)
 load_dotenv()
 
 # Variables de configuración desde el archivo .env
@@ -23,7 +23,7 @@ DB_PASSWORD = os.getenv("DB_PASSWORD")
 CREATE_TABLE_SQL = "scripts/create_table_Movies.sql"
 LOAD_TABLE_SQL = "scripts/load_table_Movies.sql"
 
-# Configuración de conexión a la base de datos
+# Configuración de conexión a la base de datos (pyodbc actúa aquí)
 connection_string = (
     f"DRIVER={{ODBC Driver 17 for SQL Server}};"
     f"SERVER={DB_SERVER};"
